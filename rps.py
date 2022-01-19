@@ -7,25 +7,25 @@ while True:
 	x = int(input('Введите число: '))
 	if x == 1:
 		while True:
-			print('!!!Просьба писать с заглавной буквы!!!')
 			userchoice = input('Камень, ножницы или бумага? ')
-			if userchoice == 'Камень' or 'Ножницы' or 'Бумага':
-				cc = ['Камень', 'Ножницы', 'Бумага']
+			userchoice = userchoice.lower()
+			if userchoice == 'камень' or 'ножницы' or 'бумага':
+				cc = ['камень', 'ножницы', 'бумага']
 				computercoice = random.choice(cc)
 				if userchoice == computercoice:
 					print('Ничья!')
-				elif userchoice == 'Камень' and computercoice == 'Бумага':
-					print('Проигрыш, компьютер выбрал', computercoice)
-				elif userchoice == 'Камень'and computercoice == 'Ножницы':
-					print('Победа, компьютер выбрал', computercoice)
-				elif userchoice == 'Ножницы' and computercoice == 'Камень':
-					print('Проигрыш, компьютер выбрал', computercoice)
-				elif userchoice == 'Ножницы' and computercoice == 'Бумага':
-					print('Победа, компьютер выбрал', computercoice)
-				elif userchoice == 'Бумага' and computercoice == 'Ножницы':
-					print('Проигрыш, компьютер выбрал', computercoice)
-				elif userchoice == 'Бумага' and computercoice == 'Камень':
-					print('Победа, компьютер выбрал', computercoice)
+				elif userchoice == 'камень' and computercoice == 'бумага':
+					print('Проигрыш, компьютер выбрал бумага')
+				elif userchoice == 'камень'and computercoice == 'ножницы':
+					print('Победа, компьютер выбрал ножницы')
+				elif userchoice == 'ножницы' and computercoice == 'камень':
+					print('Проигрыш, компьютер выбрал камень')
+				elif userchoice == 'ножницы' and computercoice == 'бумага':
+					print('Победа, компьютер выбрал бумага')
+				elif userchoice == 'бумага' and computercoice == 'ножницы':
+					print('Проигрыш, компьютер выбрал ножницы')
+				elif userchoice == 'бумага' and computercoice == 'камень':
+					print('Победа, компьютер выбрал камень')
 			else:
 				print('Неправильно введён выбор, попробуйте заново')
 	elif x == 2:
